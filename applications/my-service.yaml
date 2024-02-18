@@ -14,3 +14,8 @@ spec:
     path: .
     repoURL: https://github.com/carioca-org/my-service
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+
