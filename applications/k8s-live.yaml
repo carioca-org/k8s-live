@@ -11,6 +11,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: .
+    path: applications
     repoURL: https://github.com/carioca-org/k8s-live
     targetRevision: HEAD
