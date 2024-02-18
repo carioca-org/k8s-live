@@ -10,7 +10,12 @@ spec:
     namespace: sre
     server: https://kubernetes.default.svc
   project: default
-  source:
-    path: applications
-    repoURL: https://github.com/carioca-org/k8s-live
-    targetRevision: HEAD
+
+  sources:
+    - path: applications
+      repoURL: https://github.com/carioca-org/k8s-live
+      targetRevision: HEAD
+
+    - path: namespaces
+      repoURL: https://github.com/carioca-org/k8s-live
+      targetRevision: HEAD
