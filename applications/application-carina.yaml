@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: carina
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./kubernetes/production
+    repoURL: https://github.com/carioca-org/carina.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
